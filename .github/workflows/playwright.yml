@@ -11,7 +11,8 @@ on:
 
 jobs:
   e2e:
-    runs-on: ubuntu-latest
+    # Fixado em 24.04: o ubuntu-latest passou a ser o 26.04, ainda não suportado pelo Playwright 1.60
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
